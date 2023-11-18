@@ -82,11 +82,31 @@ class WeatherScreen extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  HourlyForecastItem(),
-                  HourlyForecastItem(),
-                  HourlyForecastItem(),
-                  HourlyForecastItem(),
-                  HourlyForecastItem(),
+                  HourlyForecastItem(
+                    icon: Icons.sunny_snowing,
+                    temperature: '54',
+                    time: '12:00',
+                  ),
+                  HourlyForecastItem(
+                    icon: Icons.sunny,
+                    temperature: '54',
+                    time: '12:00',
+                  ),
+                  HourlyForecastItem(
+                    icon: Icons.heart_broken,
+                    temperature: '54',
+                    time: '12:00',
+                  ),
+                  HourlyForecastItem(
+                    icon: Icons.cloud_off_sharp,
+                    temperature: '54',
+                    time: '12:00',
+                  ),
+                  HourlyForecastItem(
+                    icon: Icons.cloudy_snowing,
+                    temperature: '54',
+                    time: '12:00',
+                  ),
                 ],
               ),
             ),
@@ -108,9 +128,18 @@ class WeatherScreen extends StatelessWidget {
             const Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                AdditionalInfoItem(),
-                AdditionalInfoItem(),
-                AdditionalInfoItem(),
+                AdditionalInfoItem(
+                    icon: Icons.water_drop, label: 'Humidity', value: '91'),
+                AdditionalInfoItem(
+                  icon: Icons.air,
+                  label: 'Pollution',
+                  value: '78',
+                ),
+                AdditionalInfoItem(
+                  icon: Icons.beach_access,
+                  label: 'Umbrella',
+                  value: '44',
+                ),
               ],
             )
           ],
